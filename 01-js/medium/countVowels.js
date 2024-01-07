@@ -5,8 +5,22 @@
   Once you've implemented the logic, test your code by running
 */
 
+const isVowel = (char) => {
+  if(char === 'a' || char === 'e' || char === 'i' || char ==='o' || char === 'u'){
+    return true;
+  }
+  return false;
+}
+
 function countVowels(str) {
-    // Your code here
+  str = str.toLowerCase();
+  let countVowel = 0;
+  for(let i=0;i<str.length;i++){
+    if(isVowel(str[i])){
+      countVowel +=1;
+    }
+  }
+  return countVowel;
 }
 
 module.exports = countVowels;
